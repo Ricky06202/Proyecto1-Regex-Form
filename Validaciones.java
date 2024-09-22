@@ -20,7 +20,7 @@ public class Validaciones {
 	}
 
 	public String correo(String correo) {
-		String regex = "^[a-zA-Z0-9_+&*-]+(.[a-zA-Z0-9_+&*-]+)*@([a-zA-Z0-9-]+.)+[a-zA-Z]{2,3}$";
+		String regex = "^[a-zA-Z0-9_+&*-]+(\\.[a-zA-Z0-9_+&*-]+)*@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,3}$";
 		while (true) {
 			if (correo.matches(regex))
 				return correo;
@@ -60,7 +60,7 @@ public class Validaciones {
 	}
 
 	public String clave(String clave) {
-		String regex = "[a-zA-Z0-9_]{8,32}";
+		String regex = "[a-zA-Z0-9_@#$%&*]{8,32}";
 		while (true) {
 			if (clave.matches(regex))
 				return clave;
